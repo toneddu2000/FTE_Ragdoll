@@ -1,4 +1,6 @@
 # FTE_Ragdoll
+![alt text](https://raw.githubusercontent.com/toneddu2000/FTE_Ragdoll/master/screenshot.png)
+
 Simple ragdoll example with FTEQW game engine. This simple project provides an intuitive way to test ragdolls in FTEQW.
 
 Controls:

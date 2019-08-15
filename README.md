@@ -18,6 +18,6 @@ Known bugs:
 5) ODE seems to work only on Windows
 
 Important files:
-src folder - where all the ragdolls logic takes places, especially ragdoll.c
-models/ragtest2.blend 3d model with animations (Blender file)
-models/ragtest2.iqm.doll doll file used by engine to read 3d model bones. Hopefully my comments will help you
+- src folder - where all the ragdolls logic takes places, especially ragdoll.c
+- models/ragtest2.blend 3d model with animations (Blender file)
+- models/ragtest2.iqm.doll doll file used by engine to read 3d model bones. Hopefully my comments will help you

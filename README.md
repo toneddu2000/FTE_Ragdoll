@@ -10,3 +10,4 @@ Known bugs:
 2)Scene collider MUST be set to SOLID_BSP which doesn't work well with traceline MOVE_HITMODEL so scene has been split in planes and colliders.
 3)After 10 ragdolls system performance are too low
 4)Animation driven ragdolls doesn't copy last frame position/rotation, giving unrealistic animations
+5)ODE seems to work only on Windows

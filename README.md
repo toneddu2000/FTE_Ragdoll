@@ -11,3 +11,8 @@ Known bugs:
 3)After 10 ragdolls system performance are too low
 4)Animation driven ragdolls doesn't copy last frame position/rotation, giving unrealistic animations
 5)ODE seems to work only on Windows
+
+Important files:
+src folder - where all the ragdolls logic takes places, especially ragdoll.c
+models/ragtest2.blend 3d model with animations (Blender file)
+models/ragtest2.iqm.doll doll file used by engine to read 3d model bones. Hopefully my comments will help you

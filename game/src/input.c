@@ -1,3 +1,27 @@
+/*
+MIT License
+
+Copyright (c) 2018 Antonio "toneddu2000" Latronico
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+*/
+
 //from craFTEr - MIT licensed
 void Ed_Cursor()
 {
@@ -26,16 +50,18 @@ float Input_Manager(float evtype, float scanx,float chary)
 	switch(evtype){
 		case IE_KEYDOWN:
 			if (scanx == K_MOUSE1){
+				/*
 				if(doll){
-					//TONEDDUFIXME:it doesn't work
-					/*
+					//TONEDDUFIXME:dismemberment doesn't work
+					
 					skel_build(doll.skeletonindex, doll, doll.modelindex,0,0,0);
 					skel_ragupdate(doll,"animatebody root 0",doll.skeletonindex);
 					skel_set_bone(doll.skeletonindex, 8, [0,0,300]);
 					skel_build(doll.skeletonindex, doll, doll.modelindex,0,0,0);
-					*/
+					
 					//Ragdoll_Dismemberment(doll,"jleg_r");
 				}
+				*/
 			}
 			else if (scanx == K_UPARROW){
 				setorigin(sceneGizmo,[sceneGizmo.origin_x+=8,sceneGizmo.origin_y,sceneGizmo.origin_z]);
@@ -55,12 +81,8 @@ float Input_Manager(float evtype, float scanx,float chary)
 				Ragdoll_Spawn();
 			}
 			else if (scanx == K_MOUSE2){
-				//Ragdoll_Reset(doll,"die");
 				inputCursor = !inputCursor;
 				setcursormode(inputCursor);
-			}
-			else if (scanx == K_RCTRL){
-				//Ragdoll_Spawn();
 			}
 			else if (scanx == K_TAB){
 				uiBoneNames = !uiBoneNames;
@@ -78,7 +100,7 @@ float Input_Manager(float evtype, float scanx,float chary)
 				ragdollAnimation = !ragdollAnimation;
 			}
 			//LETTER B
-			if(scanx == 98){
+			else if(scanx == 98){
 				scenePureBSP = !scenePureBSP;
 				cvar_set("scene_purebsp",ftos(scenePureBSP));
 			}

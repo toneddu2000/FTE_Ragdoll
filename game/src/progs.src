@@ -1,4 +1,4 @@
-#pragma 	PROGS_DAT "../../csprogs.dat"
+#pragma 	PROGS_DAT "../csprogs.dat"
 #define 	CSQC
 #include	"defs.c"
 #include	"defscustom.c"

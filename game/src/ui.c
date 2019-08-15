@@ -52,7 +52,7 @@ void UI_PostUpdate(float w,float h)
 	drawstring([10,h-50,0], "Right click to toggle cursor/view move. Left click to spawn ragdoll at gizmo location", [6,6,0],[1,1,1], 1, 0);
 	drawstring([10,h-40,0], "Mouse wheel to adjust gizmo Z location", [6,6,0],[1,1,1], 1, 0);
 	drawstring([10,h-30,0], "A key to enable ragdoll animation-based, Tab key to toggle bone names display", [6,6,0],[1,1,1], 1, 0);
-	drawstring([10,h-20,0], "Space to change scene and Enter to confirm", [6,6,0],[1,1,1], 1, 0);
+	drawstring([10,h-20,0], "Space to change scene and Enter to confirm. Q to quit.", [6,6,0],[1,1,1], 1, 0);
 	if(ragdollAnimation){
 		drawstring([w/2-80,40,0], "Ragdoll animation active", [8,8,0],[1,0,0], 1, 0);
 	}

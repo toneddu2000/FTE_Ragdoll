@@ -104,6 +104,10 @@ float Input_Manager(float evtype, float scanx,float chary)
 				scenePureBSP = !scenePureBSP;
 				cvar_set("scene_purebsp",ftos(scenePureBSP));
 			}
+			//letter Q
+			else if (scanx == 113){
+				localcmd("quit");
+			}
 			else if (scanx == K_ENTER){
 				cvar_set("scene_num",ftos(sceneNum));
 				localcmd("map game.map");

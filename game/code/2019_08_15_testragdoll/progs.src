@@ -1,0 +1,10 @@
+#pragma 	PROGS_DAT "../../csprogs.dat"
+#define 	CSQC
+#include	"defs.c"
+#include	"defscustom.c"
+#include	"ragdoll.c"
+#include	"ui.c"
+#include	"input.c"
+#include	"scene.c"
+#include	"view.c"
+#include	"csqc.c"

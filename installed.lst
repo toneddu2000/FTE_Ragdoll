@@ -1,0 +1,4 @@
+version 2
+set updatemode "1"
+set declined ""
+"Plugins/ode" ver=???? gamedir= arch=Win_x86 root=bin file=fteplug_ode_x86.dll

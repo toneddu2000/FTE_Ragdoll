@@ -1,0 +1,4 @@
+game ragdolltest
+name "Ragdoll Test"
+basegame game
+disablehomedir 1

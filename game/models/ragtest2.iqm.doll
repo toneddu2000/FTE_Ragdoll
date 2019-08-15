@@ -1,0 +1,123 @@
+updatejoint default
+   type hinge
+   draw 0
+   offset 0 0 0
+
+   lostop -0.1
+   histop 0.1
+   //axis  0 
+   erp  0.2
+   cfm  0.001
+
+   lostop2 -0.5
+   histop2 0.5
+   //axis2 
+   erp2 0.2
+   cfm2 0.001
+updatebody default
+   shape box
+   draw 0
+   animate 0
+   mass 1
+
+//bodies
+body root root
+	shape box
+	mass 2
+body hips hips
+	shape box
+	mass 2
+body thigh_r thigh_r
+	shape box
+	mass 2
+body leg_r leg_r
+	shape box
+	mass 2
+body foot_r foot_r
+	shape box
+	mass 2
+body thigh_l thigh_l
+	shape box
+	mass 2
+body leg_l leg_l
+	shape box
+	mass 2
+body foot_l foot_l
+	shape box
+	mass 2
+body spine1 spine1
+	shape box
+	mass 2
+body spine2 spine2
+	shape box
+	mass 2
+body armupper_r armupper_r
+	shape box
+	mass 2
+body armlower_r armlower_r
+	shape box
+	mass 2
+body hand_r hand_r
+	shape box
+	mass 2
+body armupper_l armupper_l
+	shape box
+	mass 2
+body armlower_l armlower_l
+	shape box
+	mass 2
+body hand_l hand_l
+	shape box
+	mass 2
+body head head
+	shape box
+	mass 2
+
+//joints
+joint jrootbottom root hips
+	type universal
+
+joint jhips_r hips thigh_r
+	type universal
+
+joint jhips_l hips thigh_l
+	type universal
+	
+joint jthigh_r thigh_r leg_r
+	type universal
+	
+joint jleg_r leg_r foot_r
+	type universal
+	
+joint jthigh_l thigh_l leg_l
+	type universal
+	
+joint jleg_l leg_l foot_l
+	type universal
+	
+joint jroottop root spine1
+	type universal
+	
+joint jspine1 spine1 spine2
+	type universal
+	
+joint jclav_r spine2 armupper_r
+	type universal
+	
+joint jarm_r armupper_r armlower_r
+	type universal
+	
+joint jhand_r armlower_r hand_r
+	type universal
+	
+joint jclavl_r spine2 armupper_l
+	type universal
+	
+joint jarm_l armupper_l armlower_l
+	type universal
+	
+joint jhand_l armlower_l hand_l
+	type universal
+	
+joint jspine2 spine2 head
+	type universal

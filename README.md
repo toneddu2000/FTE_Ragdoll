@@ -1,5 +1,5 @@
 # FTE_Ragdoll
-Simple ragdoll examples with FTEQW game engine. This simple project provides an intuitive way to test ragdolls in FTEQW.
+Simple ragdoll example with FTEQW game engine. This simple project provides an intuitive way to test ragdolls in FTEQW.
 Controls:
 Right mouse to toggle cursor placement on/off. Left click to spawn ragdoll at gizmo location.
 Space key to swap between scenes and OK to launch chosen scene.

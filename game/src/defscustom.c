@@ -41,6 +41,11 @@ const vector 	CAMERA_ORIGIN_OFFSET = [-300,0,300];
 entity 			doll,ragdollCurrent;
 float			ragdollAnimation;
 .float 			ragdollActive,ragdollOnGround,ragdollDieAnimation;
+#define SPIKE_RAGDOLL
+#ifdef SPIKE_RAGDOLL
+//anim
+.float			animSkelSlot;
+#endif
 //ui
 float			uiBoneNames;
 const float		UI_HEADER_HEIGHT = 16;

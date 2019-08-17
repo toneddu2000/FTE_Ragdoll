@@ -1,0 +1,55 @@
+
+//bodies
+body b0 b0
+	shape box
+	draw 0
+	animate 0
+	mass 2
+body b1 b1
+	shape box
+	draw 0
+	animate 0
+	mass 2
+body b2 b2
+	shape box
+	draw 0
+	animate 0
+	mass 2
+body b3 b3
+	shape box
+	draw 0
+	animate 0
+	mass 2
+
+//joints
+joint j0 b0 b1
+	type universal
+	draw 0
+	offset 0 0 0
+	//low hi stop
+	lostop -0.8
+	histop 0.8
+	//low hi stop 2
+	lostop2 -1
+	histop2 1
+joint j1 b1 b2
+	type universal
+	draw 0
+	offset 0 0 0
+	//low hi stop
+	lostop -0.8
+	histop 0.8
+	//low hi stop 2
+	lostop2 -1
+	histop2 1
+joint j2 b2 b3
+	type universal
+	draw 0
+	offset 0 0 0
+	//low hi stop
+	lostop -0.8
+	histop 0.8
+	//low hi stop 2
+	lostop2 -1
+	histop2 1
+

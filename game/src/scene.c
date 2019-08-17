@@ -44,7 +44,7 @@ void Scene_Init()
 	sceneGizmo = spawn();
 	setorigin(sceneGizmo,[0,0,180]);
 	setmodel(sceneGizmo,"models/gizmo.iqm");
-	sceneGizmo.solid = SOLID_NOT;
+	sceneGizmo.solid = SOLID_SLIDEBOX;
 	setsize(sceneGizmo,sceneGizmo.mins,sceneGizmo.maxs);
 	
 	//create scene sceneCollision model

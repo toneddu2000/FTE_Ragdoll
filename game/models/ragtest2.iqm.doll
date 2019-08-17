@@ -1,24 +1,27 @@
-updatejoint default
-   type hinge
-   draw 0
-   offset 0 0 0
-
-   lostop -0.1
-   histop 0.1
-   //axis  0 
-   erp  0.2
-   cfm  0.001
-
-   lostop2 -0.5
-   histop2 0.5
-   //axis2 
-   erp2 0.2
-   cfm2 0.001
+//default controls all bodies and joints
 updatebody default
-   shape box
-   draw 0
-   animate 0
-   mass 1
+	shape box
+	draw 0
+	//animate 0
+	mass 1
+updatejoint default
+	type hinge
+	draw 0
+	offset 0 0 0
+	//low hi stop
+	lostop -0.08
+	histop 0.08
+	//axis 1 
+	// erp is how much joints move - it should be less the erp2, default 0.3 for erm and 0.35 for erp2
+	// cfm is how soft costraint is 0 = hard 1 = supersoft, default is 0.0001 for crm and 0.001 for crm2
+	erp  0.3
+	cfm  0
+	//low hi stop
+	lostop2 -0.1
+	histop2 0.1
+	//axis2 
+	erp2 0.35
+	cfm2 0.01
 
 //bodies
 body root root

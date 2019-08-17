@@ -47,7 +47,7 @@ void UI_PostUpdate(float w,float h)
 	drawstring([160,10,0], "Curved", [8,8,0],[1,1,1], 1, 0);
 	drawstring([240,10,0], "Moving ball", [8,8,0],[1,1,1], 1, 0);
 	drawline(6, [barx,30], [barx+50,30], [1,1,1],1);
-	Ragdoll_PrintBoneNames(doll);
+	//Ragdoll_PrintBoneNames(doll);
 	drawfill([0,h-60],[w,60], [0,0,0],1);
 	drawstring([10,h-50,0], "Right click to toggle cursor/view move. Left click to spawn ragdoll at gizmo location", [6,6,0],[1,1,1], 1, 0);
 	drawstring([10,h-40,0], "Mouse wheel to adjust gizmo Z location", [6,6,0],[1,1,1], 1, 0);

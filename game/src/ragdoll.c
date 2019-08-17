@@ -78,13 +78,26 @@ void Ragdoll_Execute(entity e, string framename, float speed)
 		}
 	}
 	if(e.ragdollActive){
+#ifdef SPIKE_RAGDOLL
+		//updates e.skeletonindex, copying any animated (ie: non-ragdoll) bodies from e.animskel,
+		//using strcat(e.model,".doll") if no specific doll file was attached to the sko.
+		skel_build(e.skeletonindex, e, e.modelindex,0,0,0,1);
+		skel_ragupdate(e,"animate 0",e.skeletonindex);
+		skel_ragupdate(e,strcat("doll ",e.model,".doll"),0);
+#else
 		skel_build(e.skeletonindex, e, e.modelindex,0,0,0);
 		skel_ragupdate(e,"animate 1",e.skeletonindex);
 		skel_ragupdate(e,strcat("doll ",e.model,".doll"),e.skeletonindex);
+#endif
 	}
 	else{
+#ifdef SPIKE_RAGDOLL
+		skel_build(e.animSkelSlot, e, e.modelindex,0,0,0);
+		skel_ragupdate(e,"animate 0",e.animSkelSlot);
+#else
 		skel_build(e.skeletonindex, e, e.modelindex,0,0,0);
 		skel_ragupdate(e,"animate 0",e.skeletonindex);
+#endif
 	}
 }
 
@@ -113,10 +126,16 @@ void Ragdoll_Reset(entity e, string framename)
 
 void Ragdoll_Create(entity e)
 {
+#ifdef SPIKE_RAGDOLL
+	if (!e.animSkelSlot) e.animSkelSlot = skel_create(e.modelindex); //for lerped animations.
+	if (!e.skeletonindex) e.skeletonindex = skel_create(e.modelindex); //for ragdoll (and the one that will actually be visible).
+	skel_build(e.animSkelSlot, e, e.modelindex, 0, 1, 0,0);  //read animation data from the model into the animation sko
+#else
 	if (!e.skeletonindex){
 		e.skeletonindex = skel_create(e.modelindex);
 		skel_build(e.skeletonindex, e, e.modelindex,0,0,0);
 	}
+#endif
 }
 
 void Ragdoll_Spawn()
